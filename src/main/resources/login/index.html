@@ -11,8 +11,11 @@
 <html>
 	<body>
 		<form action="/login" method="POST">
+			<!-- TODO: let's try a file upload -->
+			<!-- enctype="application/x-www-form-urlencoded" || enctype="multipart/form-data" -->
 			Username: <input type="text" name="username" id="username"/>
 			Password: <input type="password" name="password" id="password"/>
+			File    : <input type="file" name="filename" id="filename"/>
 			<input type="submit" name="Submit" value="Submit" id="submit"/>
 		</form>
 	</body>

@@ -19,6 +19,8 @@
         <http:listener allowedMethods="POST" config-ref="HttpListenerConfig" doc:name="Do Login" path="/login"/>
         <!-- The payload (HTTP request body) is a Map with the form fields. Lets write the username in the log. -->
         <logger doc:name="Log username" level="INFO" message="User #[payload.username] is trying to login"/>
+        <logger doc:name="Log message" level="INFO" message="Message in flight : #[message]"/>
+
         <!-- If username does not exist then fail and handle through exception strategy -->
         <message-filter doc:name="Validate username and password" throwOnUnaccepted="true">
             <expression-filter expression="#[payload.username == 'mule' &amp;&amp; payload.password == 'mule']"/>
