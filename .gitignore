@@ -1,0 +1,12 @@
+.idea
+.settings
+.project
+.classpath
+*.iml
+*.ipr
+*.iws
+*.log
+*.mflow
+target
+bin
+classes
